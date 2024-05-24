@@ -1,0 +1,15 @@
+{
+  "name": "Hive Multi Staker",
+  "short_name": "HMS",
+  "theme_color": "#1095c1",
+  "background_color": "#11191f",
+  "display": "minimal-ui",
+  "scope": "/",
+  "start_url": "/",
+  "icons":[
+  	{
+  		"src": "/logo.png",
+  		"sizes": "any"
+  	}
+  ]
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>Hive Multi Staker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+	<link rel="manifest" href="./site.webmanifest">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net/" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net/" >
+	<link rel="stylesheet" href="./pico.min.css">
+	<meta name="description" content="Hive Multi Staker is a HIVE service who can Claim, stake or unstake your Hive-Engine tokens, as you wish !" />
+
+  <meta property="og:url" content="https://stake.hivelive.me/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hive Multi Staker">
+  <meta property="og:description" content="Hive Multi Staker is a HIVE service who can Claim, stake or unstake your Hive-Engine tokens, as you wish !">
+  <meta property="og:image" content="https://stake.hivelive.me/social.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="stake.hivelive.me">
+  <meta property="twitter:url" content="https://stake.hivelive.me/">
+  <meta name="twitter:title" content="Hive Multi Staker">
+  <meta name="twitter:description" content="Hive Multi Staker is a HIVE service who can Claim, stake or unstake your Hive-Engine tokens, as you wish !">
+	<style>
+    .proposal{padding: 1%; text-align: center;}
+    .proposal p {font-weight: bold;}
+    #results{display:none;}
+    .back{margin-left:1%;}
+    .text-center{text-align:center;}
+    .numbers{width: 40% !important;display:inline-block;vertical-align:baseline !important;margin-right: 1%;}
+    .logo{margin: 1%;}
+    footer {font-size: 10pt;}
+  </style>
+</head>
+<body>
+  <div>
+  
+  </div>
+	<div class="text-center logo">
+    <picture>
+      <source srcset="hms-logo.png" media="(prefers-color-scheme: dark)"/>
+      <img src="hms-logo-light.png" alt="Hive Multi Staker logo"/>
+    </picture>
+	</div>
+  <main class="container">
+    <section>
+      <!--<p>Hive Multi Staker (HMS) is a tool made for claim, stake or unstake all your Hive-Engine tokens. You can use this tool with <a href="https://hive-keychain.com/">Hive Keychain</a> or <a href="https://hivesigner.com/">HiveSigner</a>.</p>-->
+      <div id="accountForm">
+        <h2>Enter your HIVE username</h2>
+        <label for="hiveAccount">Account name :</label>
+        <input type="text" name="hiveAccount" id="hiveAccount" placeholder="Enter your HIVE account name" />
+				<hr>
+        <h2>What do you want ?</h2>
+        <div class="text-center">
+		      <button class="action" id="claim" name="button">Claim rewards</button>
+		      <button class="action" id="stake" name="button">Stake tokens</button>
+		      <button class="action" id="unstake" name="button">Unstake tokens</button>
+          <button class="action" id="sendTo" name="button">Send to another account</button>
+        </div>
+        
+        <p id="error"></p>
+      </div>
+      <div id="results">
+        <h3 id="title">Tokens to stake</h3>
+        <p><input type="checkbox" id="checkAll" /><label for="checkAll">Select all</label></p>
+        <p id="tokens"></p>
+        <div id="btns"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="container">
+    <p>
+		  This project was made by <a href="https://peakd.com/@bambukah">@bambukah</a>. check <a href="https://hivelive.me/">HiveLive</a> to find more Hive projects<br />
+		  Original staker code & concept by <a href="https://peakd.com/@thebeardflex">@thebeardflex</a> & <a href="https://peakd.com/@hivetrending">@hivetrending</a> for <a href="https://hive.pizza">Hive.pizza</a><br/>
+			Hive.autoclaim is a free HIVE service made by <a href="https://peakd.com/@arcange">@arcange</a>.
+		</p>
+    <p>HMS is <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fstake.hivelive.me%2F">HTML5</a>, <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fstake.hivelive.me%2F&profile=css3svg&usermedium=all&warning=1">CSS3</A> and <a href="https://wave.webaim.org/report#/https://stake.hivelive.me/">WCAG-AAA</a> standards compliant</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@0.24.0/dist/axios.min.js"></script>
+  <script defer src="./hms.js"></script>
+</body>
+</html>
